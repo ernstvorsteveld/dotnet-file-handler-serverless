@@ -21,16 +21,13 @@ dotnet new classlib -o src/file-handler
 dotnet sln file-handler-serverless.sln add src/file-handler/file-handler.csproj
 dotnet sln AzureFileHandler.sln add src/file-handler/file-handler.csproj
 dotnet sln AWSSFileHandler.sln add src/file-handler/file-handler.csproj
-
-
-
 ----
 
 
 .Dependencies
 [source,bash]
 ----
-
 # file-handler
+dotnet add package HttpMultipartParser --version 5.0.1
 dotnet add package AWSSDK.S3 --version 3.7.7.5
 ----
